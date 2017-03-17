@@ -229,15 +229,32 @@ export class AppComponent {
     title = 'Movie Seat Reservation';
     seats = SEATS;
     noSeats = 1;
+name=""
     selectedSeats = [];
+    confirmdBooking = JSON.parse(localStorage.getItem('reservedSeats'));
+ constructor() {
+     for(let seat of SEATS){
+           for(let cb of this.confirmdBooking){
+                for(let confirmSeat of cb.seates){
+                    if(seat.id === confirmSeat ){
+                        seat.status="reserved";
+                    }
+               }
+        }
+     }
+            
+  };
 errorMessage="";
 SucessMessage="";
 confirm(){
-    if(this.noSeats===this.selectedSeats.length){
+    if(this.noSeats===this.selectedSeats.length && this.name!==""){
+        var apiBookedList= JSON.parse(localStorage.getItem('reservedSeats'));
+        apiBookedList.push({"name":this.name,"seates":this.selectedSeats});
+        localStorage.setItem('reservedSeats',JSON.stringify(apiBookedList));
         this.errorMessage="";
         this.SucessMessage = "Tickets Confirmed...!"
     }else{
-         this.errorMessage ="Opps.. U Haven't choosen required no of Seats" ;
+         this.errorMessage ="Opps.. U Haven't choosen required no of Seats/ Forget to Enter the name" ;
         this.SucessMessage="";
     }
 }
