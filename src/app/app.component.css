@@ -59,3 +59,8 @@
     padding-left: 12px;
     transform: rotate(180deg);
 }
+#sucess{
+     width: 100%;
+    text-align: center;
+    color: green;
+}

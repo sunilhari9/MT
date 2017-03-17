@@ -231,6 +231,16 @@ export class AppComponent {
     noSeats = 1;
     selectedSeats = [];
 errorMessage="";
+SucessMessage="";
+confirm(){
+    if(this.noSeats===this.selectedSeats.length){
+        this.errorMessage="";
+        this.SucessMessage = "Tickets Confirmed...!"
+    }else{
+         this.errorMessage ="Opps.. U Haven't choosen required no of Seats" ;
+        this.SucessMessage="";
+    }
+}
 selectSeat(seat){
     if(this.noSeats>this.selectedSeats.length){
         if(seat.status==="free"){
@@ -241,7 +251,8 @@ selectSeat(seat){
        
             
     }else{
-        this.errorMessage ="Opps.. U Have choosen only "+ this.noSeats+ " Seats" ;
+        this.SucessMessage="";
+        this.errorMessage ="Opps.. U Have enterd only "+ this.noSeats+ " Seats" ;
     }
 }
 
