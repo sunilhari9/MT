@@ -231,7 +231,7 @@ export class AppComponent {
     noSeats = 1;
 name=""
     selectedSeats = [];
-    confirmdBooking = JSON.parse(localStorage.getItem('reservedSeats'));
+    confirmdBooking = JSON.parse(localStorage.getItem('reservedSeats'))||[];
  constructor() {
      for(let seat of SEATS){
            for(let cb of this.confirmdBooking){
@@ -248,7 +248,7 @@ errorMessage="";
 SucessMessage="";
 confirm(){
     if(this.noSeats===this.selectedSeats.length && this.name!==""){
-        var apiBookedList= JSON.parse(localStorage.getItem('reservedSeats'));
+        var apiBookedList= JSON.parse(localStorage.getItem('reservedSeats'))||[];
         apiBookedList.push({"name":this.name,"seates":this.selectedSeats});
         localStorage.setItem('reservedSeats',JSON.stringify(apiBookedList));
         this.errorMessage="";

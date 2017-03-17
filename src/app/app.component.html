@@ -1,15 +1,48 @@
 <div class="center">
-<h1 >
+    <h1>
   {{title|uppercase}}
-</h1>
-
-Name: <input type="text" [(ngModel)]="name" class="nameInput"> No Of Seats: <input type ="number" [(ngModel)]="noSeats">
+</h1> Name:
+    <input type="text" [(ngModel)]="name" class="nameInput"> No Of Seats:
+    <input type="number" [(ngModel)]="noSeats">
 </div>
 <div id="error">{{errorMessage}}</div>
 <div id="sucess">{{SucessMessage}}</div>
-<div id="screen">SCREEN</div>
+<div id="screen">ALL EYES THIS WAY</div>
 
 <div *ngFor="let seat of seats">
-        <div [ngClass]="{'reserved':seat.status==='reserved','free':seat.status==='free','selected':seat.status==='selected', 'spaceEnterence': seat.id.indexOf(6)===1, 'spaceBottom': seat.id.indexOf('C')===0}"  (click)="selectSeat(seat)"class="col-sm-1 seat"></div>
+    <div [ngClass]="{'reserved':seat.status==='reserved','free':seat.status==='free','selected':seat.status==='selected', 'spaceEnterence': seat.id.indexOf(6)===1, 'spaceBottom': seat.id.indexOf('C')===0}" (click)="selectSeat(seat)" class="col-sm-1 seat"></div>
 </div>
 <button class="bookButton btn-primary pull-right" (click)="confirm()">Book Now</button>
+<div class="row">
+    <div class="col-sm-6">
+
+        <table *ngIf="confirmdBooking.length" class="table table-striped table-hover display" style="cellspacing:0;width:100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>No. Of Seats</th>
+                    <th>Seats</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let customer of confirmdBooking">
+                    <td>{{customer.name}}</td>
+                    <td>{{customer.seates.length}}</td>
+                    <td>{{customer.seates}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-6">
+        <div class="clearfix">
+            <div class="pull-left selected seat"></div> Selected Seat
+        </div>
+        <div class="clearfix">
+        <div class="pull-left reserved seat"></div>Reserved Seat
+        </div>
+        <div class="clearfix">
+            <div class="pull-left free seat"></div> Empty Seat
+        </div>
+    </div>
+</div>
