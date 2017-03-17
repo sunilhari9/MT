@@ -253,6 +253,7 @@ confirm(){
         localStorage.setItem('reservedSeats',JSON.stringify(apiBookedList));
         this.errorMessage="";
         this.SucessMessage = "Tickets Confirmed...!"
+        location.reload();
     }else{
          this.errorMessage ="Opps.. U Haven't choosen required no of Seats/ Forget to Enter the name" ;
         this.SucessMessage="";
