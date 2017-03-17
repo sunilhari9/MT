@@ -5,10 +5,10 @@ export class Seats {
 }
 const SEATS: Seats[] = [
     {
-        id : "A1", status : "reserved"
+        id : "A1", status : "free"
         },
     {
-        id : "A2", status : "reserved"
+        id : "A2", status : "free"
         },
     {
         id : "A3", status : "free"
@@ -32,19 +32,19 @@ const SEATS: Seats[] = [
         id : "A9", status : "free"
         },
     {
-        id : "A10", status : "reserved"
+        id : "A10", status : "free"
         },
     {
-        id : "A11", status : "reserved"
+        id : "A11", status : "free"
         },
     {
         id : "A12", status : "free"
         },
     {
-        id : "B1", status : "reserved"
+        id : "B1", status : "free"
         },
     {
-        id : "B2", status : "reserved"
+        id : "B2", status : "free"
         },
     {
         id : "B3", status : "free"
@@ -56,31 +56,31 @@ const SEATS: Seats[] = [
         id : "B5", status : "free"
         },
     {
-        id : "B6", status : "reserved"
+        id : "B6", status : "free"
         },
     {
-        id : "B7", status : "reserved"
+        id : "B7", status : "free"
         },
     {
-        id : "B8", status : "reserved"
+        id : "B8", status : "free"
         },
     {
-        id : "B9", status : "reserved"
+        id : "B9", status : "free"
         },
     {
-        id : "B10", status : "reserved"
+        id : "B10", status : "free"
         },
     {
-        id : "B11", status : "reserved"
+        id : "B11", status : "free"
         },
     {
-        id : "B12", status : "reserved"
+        id : "B12", status : "free"
         },
     {
-        id : "C1", status : "reserved"
+        id : "C1", status : "free"
         },
     {
-        id : "C2", status : "reserved"
+        id : "C2", status : "free"
         },
     {
         id : "C3", status : "free"
@@ -92,31 +92,31 @@ const SEATS: Seats[] = [
         id : "C5", status : "free"
         },
     {
-        id : "C6", status : "reserved"
+        id : "C6", status : "free"
         },
     {
-        id : "C7", status : "reserved"
+        id : "C7", status : "free"
         },
     {
-        id : "C8", status : "reserved"
+        id : "C8", status : "free"
         },
     {
-        id : "C9", status : "reserved"
+        id : "C9", status : "free"
         },
     {
-        id : "C10", status : "reserved"
+        id : "C10", status : "free"
         },
     {
-        id : "C11", status : "reserved"
+        id : "C11", status : "free"
         },
     {
-        id : "C12", status : "reserved"
+        id : "C12", status : "free"
         },
     {
-        id : "D1", status : "reserved"
+        id : "D1", status : "free"
         },
     {
-        id : "D2", status : "reserved"
+        id : "D2", status : "free"
         },
     {
         id : "D3", status : "free"
@@ -128,30 +128,30 @@ const SEATS: Seats[] = [
         id : "D5", status : "free"
         },
     {
-        id : "D6", status : "reserved"
+        id : "D6", status : "free"
         },
     {
-        id : "D7", status : "reserved"
+        id : "D7", status : "free"
         },
     {
-        id : "D8", status : "reserved"
+        id : "D8", status : "free"
         },
     {
-        id : "D9", status : "reserved"
+        id : "D9", status : "free"
         },
     {
-        id : "D10", status : "reserved"
+        id : "D10", status : "free"
         },
     {
-        id : "D11", status : "reserved"
+        id : "D11", status : "free"
         },
     {
-        id : "D12", status : "reserved"
+        id : "D12", status : "free"
         },{
-        id : "E1", status : "reserved"
+        id : "E1", status : "free"
         },
     {
-        id : "E2", status : "reserved"
+        id : "E2", status : "free"
         },
     {
         id : "E3", status : "free"
@@ -163,13 +163,13 @@ const SEATS: Seats[] = [
         id : "E5", status : "free"
         },
     {
-        id : "E6", status : "reserved"
+        id : "E6", status : "free"
         },
     {
-        id : "E7", status : "reserved"
+        id : "E7", status : "free"
         },
     {
-        id : "E8", status : "reserved"
+        id : "E8", status : "free"
         },
     {
         id : "E9", status : "free"
@@ -181,9 +181,9 @@ const SEATS: Seats[] = [
         id : "E11", status : "free"
         },
     {
-        id : "E12", status : "reserved"
+        id : "E12", status : "free"
         },{
-        id : "F1", status : "reserved"
+        id : "F1", status : "free"
         },
     {
         id : "F2", status : "free"
@@ -198,25 +198,25 @@ const SEATS: Seats[] = [
         id : "F5", status : "free"
         },
     {
-        id : "F6", status : "reserved"
+        id : "F6", status : "free"
         },
     {
-        id : "F7", status : "reserved"
+        id : "F7", status : "free"
         },
     {
-        id : "F8", status : "reserved"
+        id : "F8", status : "free"
         },
     {
-        id : "F9", status : "reserved"
+        id : "F9", status : "free"
         },
     {
-        id : "F10", status : "reserved"
+        id : "F10", status : "free"
         },
     {
-        id : "F11", status : "reserved"
+        id : "F11", status : "free"
         },
     {
-        id : "F12", status : "reserved"
+        id : "F12", status : "free"
         },
     ];
 
