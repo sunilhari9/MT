@@ -3,9 +3,11 @@
   {{title|uppercase}}
 </h1>
 
-Name: <input type="text" class="nameInput"> No Of Seats: <input type ="number">
+Name: <input type="text" class="nameInput"> No Of Seats: <input type ="number" [(ngModel)]="noSeats">
 </div>
+<div id="error">{{errorMessage}}</div>
 <div id="screen">SCREEN</div>
+
 <div *ngFor="let seat of seats">
         <div [ngClass]="{'reserved':seat.status==='reserved','free':seat.status==='free','selected':seat.status==='selected', 'spaceEnterence': seat.id.indexOf(6)===1, 'spaceBottom': seat.id.indexOf('C')===0}"  (click)="selectSeat(seat)"class="col-sm-1 seat"></div>
 </div>

@@ -17,7 +17,7 @@ const SEATS: Seats[] = [
         id : "A4", status : "free"
         },
     {
-        id : "A5", status : "selected"
+        id : "A5", status : "free"
         },
     {
         id : "A6", status : "free"
@@ -172,13 +172,13 @@ const SEATS: Seats[] = [
         id : "E8", status : "reserved"
         },
     {
-        id : "E9", status : "reserved"
+        id : "E9", status : "free"
         },
     {
-        id : "E10", status : "reserved"
+        id : "E10", status : "free"
         },
     {
-        id : "E11", status : "reserved"
+        id : "E11", status : "free"
         },
     {
         id : "E12", status : "reserved"
@@ -186,7 +186,7 @@ const SEATS: Seats[] = [
         id : "F1", status : "reserved"
         },
     {
-        id : "F2", status : "reserved"
+        id : "F2", status : "free"
         },
     {
         id : "F3", status : "free"
@@ -227,11 +227,22 @@ const SEATS: Seats[] = [
 })
 export class AppComponent {
     title = 'Movie Seat Reservation';
-        seats = SEATS;
+    seats = SEATS;
+    noSeats = 1;
+    selectedSeats = [];
+errorMessage="";
 selectSeat(seat){
-    if(seat.status==="free")
-        seat.status="selected";
- 
+    if(this.noSeats>this.selectedSeats.length){
+        if(seat.status==="free"){
+            this.selectedSeats.push(seat.id);
+            seat.status="selected";
+            this.errorMessage="";
+        }
+       
+            
+    }else{
+        this.errorMessage ="Opps.. U Have choosen only "+ this.noSeats+ " Seats" ;
+    }
 }
 
 }
